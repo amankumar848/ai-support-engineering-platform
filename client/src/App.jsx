@@ -6,8 +6,8 @@ import Dashboard from "./pages/Dashboard";
 import CreateTicket from "./pages/CreateTicket";
 import TicketDetails from "./pages/TicketDetails";
 import ProtectedRoute from "./components/ProtectedRoute";
-import EngineerDashboard from "./pages/engineerDashboard";
-import AdminDashboard from "./pages/adminDashboard";
+import EngineerDashboard from "./pages/EngineerDashboard";
+import AdminDashboard from "./pages/AdminDashboard";
 
 function App() {
   return (

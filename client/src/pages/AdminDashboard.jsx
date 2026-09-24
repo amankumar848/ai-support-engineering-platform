@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import api from "../services/api";
-import AdminAnalytics from "../components/AdminAnalytics";
-import EngineerAnalytics from "../components/EngineerAnalytics";
+import AdminAnalytics from "../components/adminAnalytics";
+import EngineerAnalytics from "../components/engineerAnalytics";
 
 function AdminDashboard() {
   const [tickets, setTickets] = useState([]);
