@@ -1,0 +1,505 @@
+.ticket-details {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px 24px 60px;
+  background: #f7f8fa;
+  min-height: 100vh;
+  color: #1f2937;
+}
+
+/* Header */
+.ticket-details-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+  background: #ffffff;
+  padding: 24px 28px;
+  border-radius: 14px;
+  border: 1px solid #e5e7eb;
+  margin-bottom: 20px;
+}
+
+.ticket-details-header a {
+  display: inline-block;
+  margin-bottom: 12px;
+  color: #4f46e5;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.ticket-details-header a:hover {
+  text-decoration: underline;
+}
+
+.ticket-details-header h1 {
+  margin: 0 0 8px;
+  font-size: 28px;
+  line-height: 1.25;
+  color: #111827;
+}
+
+.ticket-details-header p {
+  margin: 0;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+/* Common sections */
+.ticket-info,
+.sla-section,
+.ai-section,
+.attachments-section,
+.comments-section,
+.activity-section {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 24px;
+  margin-bottom: 20px;
+}
+
+.ticket-info h2,
+.sla-section h2,
+.ai-section h2,
+.attachments-section h2,
+.comments-section h2,
+.activity-section h2 {
+  margin: 0 0 20px;
+  font-size: 19px;
+  color: #111827;
+}
+
+/* Ticket description */
+.ticket-info > p {
+  line-height: 1.7;
+  color: #4b5563;
+}
+
+.ticket-info > p strong {
+  color: #111827;
+}
+
+/* Ticket metadata */
+.ticket-meta {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 22px;
+  padding-top: 20px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.ticket-meta p {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  color: #6b7280;
+  font-size: 13px;
+}
+
+.ticket-meta strong {
+  color: #374151;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* Selects */
+.ticket-details select {
+  border: 1px solid #d1d5db;
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 9px 12px;
+  font-size: 14px;
+  color: #111827;
+  cursor: pointer;
+  outline: none;
+}
+
+.ticket-details select:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.12);
+}
+
+.ticket-details-header select {
+  min-width: 190px;
+  font-weight: 600;
+}
+
+/* SLA */
+.sla-section {
+  border-left: 4px solid #6366f1;
+}
+
+.sla-section p {
+  margin: 10px 0;
+  color: #4b5563;
+}
+
+.sla-section strong {
+  color: #111827;
+}
+
+.sla-overdue {
+  border-left-color: #dc2626;
+}
+
+.sla-completed {
+  border-left-color: #16a34a;
+}
+
+.sla-within {
+  border-left-color: #2563eb;
+}
+
+.sla-none {
+  border-left-color: #9ca3af;
+}
+
+/* AI */
+.ai-section {
+  background: #fafaff;
+}
+
+.ai-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.ai-section-header h2,
+.ai-section-header h3 {
+  margin: 0;
+}
+
+.ai-section button,
+.attachment-upload button,
+.comment-form button {
+  border: none;
+  border-radius: 8px;
+  padding: 10px 16px;
+  background: #4f46e5;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.ai-section button:hover,
+.attachment-upload button:hover,
+.comment-form button:hover {
+  background: #4338ca;
+}
+
+.ai-section button:disabled,
+.attachment-upload button:disabled,
+.comment-form button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.ai-analysis {
+  margin-top: 20px;
+  padding: 18px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+}
+
+.ai-analysis p {
+  margin: 10px 0;
+  line-height: 1.6;
+}
+
+.ai-analysis strong {
+  color: #111827;
+}
+
+.ai-sources {
+  margin-top: 20px;
+}
+
+.ai-sources h3 {
+  margin-bottom: 8px;
+}
+
+.ai-sources > p {
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.ai-source {
+  margin-top: 12px;
+  padding: 14px 16px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 9px;
+}
+
+.ai-source p {
+  margin: 6px 0;
+  font-size: 13px;
+  color: #6b7280;
+}
+
+/* AI response */
+.ai-response-section {
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.ai-response-section h3 {
+  font-size: 17px;
+}
+
+.ai-suggestion {
+  margin-top: 16px;
+}
+
+.ai-suggestion textarea,
+.comment-form textarea {
+  width: 100%;
+  box-sizing: border-box;
+  resize: vertical;
+  border: 1px solid #d1d5db;
+  border-radius: 9px;
+  padding: 12px 14px;
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 1.6;
+  outline: none;
+}
+
+.ai-suggestion textarea:focus,
+.comment-form textarea:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+.ai-suggestion button {
+  margin-top: 10px;
+}
+
+/* Attachments */
+.attachment-upload {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  padding: 16px;
+  background: #f9fafb;
+  border: 1px dashed #d1d5db;
+  border-radius: 10px;
+}
+
+.attachment-upload input {
+  font-size: 14px;
+}
+
+.selected-file {
+  margin: 12px 0;
+  color: #4b5563;
+  font-size: 14px;
+}
+
+.attachment-list {
+  margin-top: 18px;
+}
+
+.attachment-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  background: #ffffff;
+}
+
+.attachment-item strong {
+  color: #111827;
+}
+
+.attachment-item p {
+  margin: 5px 0 0;
+  color: #6b7280;
+  font-size: 13px;
+}
+
+.attachment-item a {
+  color: #4f46e5;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.attachment-item a:hover {
+  text-decoration: underline;
+}
+
+/* Comments */
+.comments-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.comment {
+  padding: 16px;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+}
+
+.comment-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.comment-header strong {
+  color: #111827;
+}
+
+.comment-header span {
+  background: #eef2ff;
+  color: #4f46e5;
+  padding: 3px 8px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.comment-header small {
+  color: #9ca3af;
+}
+
+.comment > p {
+  margin: 12px 0 0;
+  color: #4b5563;
+  line-height: 1.6;
+}
+
+.comment-form {
+  margin-top: 20px;
+}
+
+.comment-form button {
+  margin-top: 10px;
+}
+
+/* Activity timeline */
+.activity-list {
+  position: relative;
+  padding-left: 26px;
+}
+
+.activity-list::before {
+  content: "";
+  position: absolute;
+  left: 7px;
+  top: 5px;
+  bottom: 5px;
+  width: 2px;
+  background: #e5e7eb;
+}
+
+.activity-item {
+  position: relative;
+  padding: 0 0 20px 18px;
+}
+
+.activity-item::before {
+  content: "";
+  position: absolute;
+  left: -23px;
+  top: 5px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #6366f1;
+  border: 3px solid #ffffff;
+  box-shadow: 0 0 0 1px #c7d2fe;
+}
+
+.activity-item strong {
+  color: #111827;
+}
+
+.activity-item span {
+  color: #4b5563;
+  margin-left: 5px;
+}
+
+.activity-item small {
+  display: block;
+  margin-top: 5px;
+  color: #9ca3af;
+}
+
+/* Loading / empty states */
+.ticket-details > p,
+.ticket-details > h2 {
+  text-align: center;
+}
+
+.ticket-details a {
+  color: #4f46e5;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .ticket-details {
+    padding: 20px 14px 40px;
+  }
+
+  .ticket-details-header {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .ticket-details-header h1 {
+    font-size: 22px;
+  }
+
+  .ticket-details-header select {
+    width: 100%;
+  }
+
+  .ticket-meta {
+    grid-template-columns: 1fr;
+  }
+
+  .ticket-info,
+  .sla-section,
+  .ai-section,
+  .attachments-section,
+  .comments-section,
+  .activity-section {
+    padding: 18px;
+  }
+
+  .ai-section-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .attachment-item {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .attachment-item a {
+    white-space: normal;
+  }
+}
